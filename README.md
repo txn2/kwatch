@@ -14,8 +14,19 @@ spec:
   - name: kafka-kwatch
     image: txn2/kwatch:1.0.1
     env:
+    - name: BROKER
+      value: "kafka-headless:9092"
     - name: TOPIC
       value: "some-topic"
+    - name: OFFSET
+      value: "0"
+    - name: PARTITION
+      value: "0"
+```
+
+Tail the kwatch logs:
+```bash
+kubectl logs -f kafka-kwatch -n the-project
 ```
 
 [txn2/kwatch]:https://hub.docker.com/r/txn2/kwatch/
