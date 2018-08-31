@@ -12,7 +12,7 @@ metadata:
 spec:
   containers:
   - name: kafka-kwatch
-    image: txn2/kwatch:1.0.0
+    image: txn2/kwatch:1.0.1
     env:
     - name: TOPIC
       value: "some-topic"
