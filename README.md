@@ -18,8 +18,10 @@ spec:
       value: "kafka-headless:9092"
     - name: TOPIC
       value: "some-topic"
+    # Setting the offset to -1 means to seek to the first offset.
+    # Setting the offset to -2 means to seek to the last offset.
     - name: OFFSET
-      value: "0"
+      value: "-2"
     - name: PARTITION
       value: "0"
 ```
